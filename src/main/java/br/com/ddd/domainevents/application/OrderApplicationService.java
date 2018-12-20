@@ -3,7 +3,7 @@ package br.com.ddd.domainevents.application;
 import br.com.ddd.domainevents.domain.event.DomainEventsNotifier;
 import br.com.ddd.domainevents.domain.order.Order;
 import br.com.ddd.domainevents.domain.order.OrderCreatedEvent;
-import br.com.ddd.domainevents.infrastructure.OrderRepository;
+import br.com.ddd.domainevents.domain.order.OrderRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 

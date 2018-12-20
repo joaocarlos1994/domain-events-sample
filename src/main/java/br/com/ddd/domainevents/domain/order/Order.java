@@ -1,11 +1,12 @@
 package br.com.ddd.domainevents.domain.order;
 
-import br.com.ddd.domainevents.domain.stock.Product;
-import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import java.util.*;
 
-
+@ToString(of = {"id", "userId", "status"})
+@EqualsAndHashCode(of = { "id", "userId" })
 public class Order {
 
     private final String id = UUID.randomUUID().toString();
@@ -33,5 +34,9 @@ public class Order {
 
     public List<OrderItem> getItems() {
         return Collections.unmodifiableList(items);
+    }
+
+    public boolean match(final String id) {
+        return this.id.equals(id);
     }
 }
